@@ -1,11 +1,10 @@
 namespace OpenClose
 {
-    public class EmployeeFullTime : IEmployee
+    public class EmployeeContractor : IEmployee
     {
         public string Name { get ; set ; }
         public int HoursWorked { get; set; }
-
-        public EmployeeFullTime(string fullname, int hoursWorked)
+        public EmployeeContractor(string fullname, int hoursWorked)
         {
             Name = fullname;
             HoursWorked = hoursWorked;
@@ -13,7 +12,7 @@ namespace OpenClose
 
         public decimal CalculateSalaryMonthly()
         {
-            decimal hourValue = 30000M;
+            decimal hourValue = 40000M;
             decimal salary = hourValue * HoursWorked;
             return salary;
         }
